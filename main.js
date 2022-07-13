@@ -139,7 +139,7 @@ const someString = '    Hi, there, you all      '
 const stringNoWhiteSpaces = someString.trim()
 console.log(stringNoWhiteSpaces, ' /This is the string with no white spaces')
 
-//STRING (repeat) write a function that would srepeat string "a" and "b" "x" times.
+//STRING (repeat): write a function that would srepeat string "a" and "b" "x" times.
 
 function repeatMyText(a, b, x) {
     const stringASringBXTimes = (a + b).repeat(x)
@@ -148,7 +148,7 @@ function repeatMyText(a, b, x) {
 
 const exampleOfRepeatMethod =repeatMyText('JScript ', 'is crazy! ', 5)
 
-//STRING (concat) write a function that would join string 'y' to string 'z'and 'q'.
+//STRING (concat): write a function that would join string 'y' to string 'z'and 'q'.
 
 function concatenate(y, z, q) {
 const concatYAndZAndQ = y.concat(z, q)
@@ -157,3 +157,23 @@ console.log('These three strings have been concatenated: ', concatYAndZAndQ)
 
 const exampleConcat = concatenate('Anna ', 'is ', 'cool ')
 
+//STRING (replace) write a function that would replace any word with a different one in a string.
+
+function replaceAWord(wordToBeReplaced, newWord, givenText) {
+const stringWithReplacedWord = givenText.replace(wordToBeReplaced, newWord)
+console.log('this is a new string when a word was replaced with another one: ', stringWithReplacedWord)
+}
+const newArticle = replaceAWord('amber', 'red', article)
+
+//Write a function that would  find a given word in a text, regarding upper- and lower-case letters.
+
+function findWord(textWhereToSearch, searchedWord) {
+    const doesTheWordExistInMyText = textWhereToSearch.search(searchedWord.toLowerCase())
+    if(doesTheWordExistInMyText > -1) {
+        console.log('yes, the word exists in the text, position: ', doesTheWordExistInMyText)
+    } else {
+        console.log('sorry, the word does not exist in the text')
+    }
+}
+
+const isWeather = findWord(article, 'Alert')
