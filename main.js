@@ -109,14 +109,14 @@ function divideText(someText) {
         const partOne = someText.slice(0, someText.length / 2)
         const partTwo = someText.slice(someText.length / 2, someText.length)
         const bothParts = [partOne, partTwo]
-        console.log(bothParts)
+        console.log(bothParts.toString())
         return bothParts
         
     } else {
        const PartOneOdd = someText.slice(0, (someText.length + 1) / 2)
        const partTwoOdd = someText.slice((someText.length +1)/ 2, someText.length)
        const bothPartsOdd = [PartOneOdd, partTwoOdd]
-       console.log(bothPartsOdd)
+       console.log(bothPartsOdd.toString()) //Method transformin an array into a string 
        return bothPartsOdd
     }
 }
@@ -128,9 +128,32 @@ const showDividedText = divideText(article)
 function showFirstWords(textA, numberOfWordsToShow) {
     const xNumberOfWords = textA.split(' ', numberOfWordsToShow).join(' ')
     //const theBeginningOfArticle =
-    console.log('Im showing only the beginning of the article: ',xNumberOfWords)
+    console.log('Im showing only the beginning of the article: ', xNumberOfWords)
 }
 
 const show5FirstWords = showFirstWords(article, 5)
 
- 
+//STRING (trim): remove white spaces from the beginning and the end of the string
+
+const someString = '    Hi, there, you all      '
+const stringNoWhiteSpaces = someString.trim()
+console.log(stringNoWhiteSpaces, ' /This is the string with no white spaces')
+
+//STRING (repeat) write a function that would srepeat string "a" and "b" "x" times.
+
+function repeatMyText(a, b, x) {
+    const stringASringBXTimes = (a + b).repeat(x)
+    console.log ('These are the repeated strings: ', stringASringBXTimes)
+}
+
+const exampleOfRepeatMethod =repeatMyText('JScript ', 'is crazy! ', 5)
+
+//STRING (concat) write a function that would join string 'y' to string 'z'and 'q'.
+
+function concatenate(y, z, q) {
+const concatYAndZAndQ = y.concat(z, q)
+console.log('These three strings have been concatenated: ', concatYAndZAndQ)
+}
+
+const exampleConcat = concatenate('Anna ', 'is ', 'cool ')
+
